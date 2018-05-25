@@ -6,13 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Curriculum Vitae</title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'futurista';
+            src: url('Android 101.ttf');
+        }
+        
+        @font-face {
+            font-family: 'cuadrado';
+            src: url('Square.ttf');
+        }
+        
+        #cabezera {
+            text-align: center;
+            background: -moz-linear-gradient(top, #4A235A, #3498DB);
+            background: -webkit-linear-gradient(top, #4A235A, #3498DB);
+            width: 700px;
+            margin: 15px auto;
+            border-radius: 10px 10px 35px 35px;
+        }
+        
+        #titulo {
+            font: 50px 'futurista';
+            color: #FFF;
+        }
+        
+        #description li {
+            display: inline;
+            background: -moz-linear-gradient(top, #4A235A, #3498DB);
+            background: -webkit-linear-gradient(top, #4A235A, #3498DB);
+            border-radius: 6px;
+            margin-right: 25px;
+            color: #FFF;
+            font: 20px 'cuadrado';
+            box-shadow: #2C3E50 5px 5px 5px;
+        }
+        
+        #portada {
+            float: right;
+        }
+        
+        #description {
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        #pie_de_pagina {
+            clear: both;
+            margin: 270px 0px 0px 20px;
+        }
+        
+        body {
+            background: -moz-radial-gradient(center, ellipse, #EAECEE, #839192);
+            background: -webkit-radial-gradient(center, ellipse, #EAECEE, #839192);
+        }
+        
+        section {
+            margin-top: 70px;
+        }
+        
+        section article {
+            padding-left: 30px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h2>Curriculum Vitae</h2>
+    <header id="cabezera">
+        <span id="titulo">Curriculum Vitae</span>
     </header>
-    <nav>
+    <nav id="description">
         <ul>
             <li>Technical Skills</li>
             <li>Project Experience</li>
@@ -20,15 +84,23 @@
         </ul>
     </nav>
     <section>
-        <img src="imgs/Mi_foto.png">
-        <p>Que tal mi nombre es <strong>Omar Alejandro Sánchez Ochoa</strong>, egresado del Instituto tecnólogico de la Laguna y títulado en ingeniería mecatronica. Soy una persona persistente porque soy claro con mis decisiones, responsable porque tomo
-            las pequeñas cosas con responsabilidad y me gusta resolver problemas. La programación me empezó a interesar porque empecé a notar que con la programación empiezas a resolver problemas y comprendí que la programacion literalmente es resolver
-            problemas de la vida cotidiana o laboral. Y creo que la programacion puede mejorar la vida laboral de las personas para que puedan pasar tiempo con sus familias y amigos. Menciono esto porque he tenido experiencias laborales que no esta relacionado
-            con la programación donde el trabajo te consume por completo. Y como objetivo profesional es resolver problemas a través de la programación, y que los programas esten diseñados de manera muy intuitiva. Y mejorar la vida laboral de las personas.
-        </p>
-        <p>omar.saoc@gmail.com</p>
+        <figure id="portada">
+            <img src="imgs/Mi_foto.png" id="foto">
+        </figure>
+        <article>
+            <p>Que tal mi nombre es <strong>Omar Alejandro Sánchez Ochoa</strong>, egresado del Instituto tecnólogico de la Laguna y títulado en ingeniería mecatronica. Soy una persona persistente porque soy claro con mis decisiones, responsable porque tomo
+                las pequeñas cosas con responsabilidad y me gusta resolver problemas. La programación me empezó a interesar porque empecé a notar que con la programación empiezas a resolver problemas y comprendí que la programacion literalmente es resolver
+                problemas de la vida cotidiana o laboral. Y creo que la programacion puede mejorar la vida laboral de las personas para que puedan pasar tiempo con sus familias y amigos. Menciono esto porque he tenido experiencias laborales que no esta
+                relacionado con la programación donde el trabajo te consume por completo. Y como objetivo profesional es resolver problemas a través de la programación, y que los programas esten diseñados de manera muy intuitiva. Y mejorar la vida laboral
+                de las personas.
+            </p>
+        </article>
+
     </section>
-    <footer><address>Tel.8714365569</address></footer>
+    <footer id="pie_de_pagina">
+        <address>Tel.8714365569</address>
+        <p>omar.saoc@gmail.com</p>
+    </footer>
 
 </body>
 
