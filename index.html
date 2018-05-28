@@ -101,6 +101,25 @@
             box-shadow: #A9CCE3 5px 5px 10px;
         }
     </style>
+    <script src="Jquery/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#cabezera").hide();
+            $("#description").hide();
+            $("#articulo").hide();
+            $("#barralateral").hide();
+            $("#pie_de_pagina").hide();
+
+            $("#cabezera").fadeIn(2000);
+            $("#description").fadeIn(2000, function() {
+                $("#articulo").fadeIn(2000, function() {
+                    $("#barralateral").fadeIn(2000, function() {
+                        $("#pie_de_pagina").fadeIn(2000);
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -121,7 +140,7 @@
         <blockquote>omar.saoc@gmail.com</blockquote>
         <blockquote>https://github.com/omarSanOc</blockquote>
     </aside>
-    <section>
+    <section id="articulo">
         <article>
             <p>Que tal mi nombre es <strong>Omar Alejandro Sánchez Ochoa</strong>, egresado del Instituto tecnólogico de la Laguna y títulado en ingeniería mecatronica. Soy una persona persistente porque soy claro con mis decisiones, responsable porque tomo
                 las pequeñas cosas con responsabilidad y me gusta resolver problemas. La programación me empezó a interesar porque empecé a notar que con la programación empiezas a resolver problemas y comprendí que la programacion literalmente es resolver
