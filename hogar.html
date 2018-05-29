@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hogar</title>
-
     <style>
         #mapa {
-            width: 500px;
-            height: 500px;
+            width: 600px;
+            height: 450px;
+            margin: 20px auto;
+        }
+        
+        #mapa h4 {
+            color: #000;
+            font-style: bold;
+        }
+        
+        body {
+            background-color: #1F618D;
         }
     </style>
 
@@ -21,11 +30,21 @@
         $(document).ready(function() {
 
             $("#mapa").goMap({
-                latitude: 25.5535132,
-                longitude: -103.3717213,
-                zoom: 16,
-                maptype: "TERRAIN",
+                latitude: 25.5539618,
+                longitude: -103.3698181,
+                zoom: 19,
+                maptype: "SATELLITE",
                 scaleControl: true
+            });
+
+            $.goMap.createMarker({
+                latitude: 25.5539618,
+                longitude: -103.3698181,
+                title: "Click!!",
+                html: {
+                    content: "<h4>Según google maps aquí es la calle parras #92, pero en realidad es calle parras #12 xD</h4>",
+                    popup: true
+                }
             });
         });
     </script>
