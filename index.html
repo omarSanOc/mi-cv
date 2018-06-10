@@ -126,8 +126,20 @@
             $(".iframe").fancybox({
                 width: 700,
                 height: 800,
-                openEffect: 'elastic',
-                closeEffect: 'elastic',
+                transitionIn: 'elastic',
+                transitionOut: 'elastic',
+                helpers: {
+                    title: {
+                        type: 'inside'
+                    }
+                }
+            });
+
+            $("#skills a").fancybox({
+                width: 700,
+                height: 800,
+                transitionIn: 'elastic',
+                transitionOut: 'elastic',
                 helpers: {
                     title: {
                         type: 'inside'
@@ -143,8 +155,10 @@
         <span id="titulo">Curriculum Vitae</span>
     </header>
     <nav id="description">
-        <ul>
-            <li>Technical Skills</li>
+        <ul id="skills">
+            <a href="skills.html">
+                <li>Technical Skills</li>
+            </a>
             <li>Project Experience</li>
             <li>Education</li>
         </ul>
